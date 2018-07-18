@@ -1,8 +1,8 @@
-# Lets Go Dil!
+# Lets Go, Dil!
 
 Where do you want to go? What do you want to do? What do you want to be?
 
-What are you waiting for?
+## What are you waiting for?
 
 The Time is Now. Your Time is Now.
 
