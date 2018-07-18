@@ -1,4 +1,4 @@
-![Let's Go, Dil] (http://letsgodil.com/logo.png)
+[Let's Go, Dil]: http://letsgodil.com/logo.png "Logo"
 # Lets Go, Dil!
 
 Where do you want to go? What do you want to do? What do you want to be?
