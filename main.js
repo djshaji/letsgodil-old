@@ -40,7 +40,9 @@ function query () {
 }
 
 function set_search() {
-	document.getElementById("search").value = window.location.href.substr( window.location.href.indexOf("?") + 3)
+	// This needs to be fixed!
+	document.getElementById("search").value = window.location.href.substr( window.location.href.indexOf("?") + 3).replace ("%20", " ");
+	document.title = "#Lets GD:  " . concat (window.location.href.substr( window.location.href.indexOf("?") + 3)).replace ("%20", " ");
 }
 
 function trigger_search (e) {
