@@ -31,6 +31,10 @@ function set_titles () {
 
 function query () {
 	var q = document.getElementById("search").value;
+	if (q == '') {
+		alert ("Enter a search term!");
+		return;
+	}
 	var uri = "go.php?q=" + q;
 	window.location.replace (uri);
 }
@@ -46,4 +50,23 @@ function trigger_search (e) {
         return false;
     }
     return true;
+}
+
+function fortune_change () 
+{
+    if (this.readyState == 4 && this.status == 200)
+    {
+        text = this.responseText
+        text = text .replace(/(\r\n|\\n|\r)/gm,"<br>").replace(/(\\t)/gm,"    ").slice (1, -1).replace(/(\\")/gm,'"')
+        document.getElementById("fortune").innerHTML = text
+    }
+}
+
+function fortune ()
+{
+    var xmlhttp;
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = fortune_change
+    xmlhttp.open ("GET", "http://shajikhan.in/api/fortune", true)
+    xmlhttp.send ()
 }

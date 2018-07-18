@@ -13,6 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="mui.min.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="mui.min.js"></script>
     <script src="main.js">
     </script>
@@ -24,7 +25,7 @@
     		style="width: 100%">
     <div class="mui-container-fluid"
     		align="center"
-    		style="margin-top: 5em">
+    		style="margin-top: 3em">
 		<a href="javascript: set_titles ()" >        
         <img 	src="logo.png" 
         		alt="Go Dil">
@@ -55,6 +56,12 @@
 	   			onclick="javascript: query ()">
 	   			Go, Dil!</button>
   	</div>
+	<div align="right" class="mui-container-fluid" style="padding: 20px">
+		<span  class="mui--text-light-secondary">
+		<a href="about"> About </a>
+		</span>
+	</div>
+
 </div>
   </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
 	include "search.php";
+	include "ui.php";
 ?>
 <!doctype html>
 <html>
@@ -16,7 +17,8 @@
 
 
 <body onload="javascript: set_search ()">
-<div class="mui-appbar" >
+<?php banner () ?>
+<!-- <div class="mui-appbar" >
 	<a href="http://letsgodil.com" >
     <img 	src="logo_small.png" 
 			alt="Go Dil"
@@ -29,19 +31,23 @@
 			>
 		Let's Go, Dil!
 	</label>
+	</div> -->
 
-	 	<div class="mui-textfield"
+<!-- 	 	<div class="mui-textfield"
  			style="width: 70%; margin-left: 5.3em;margin-top: 0;vertical-align: 0;" >
-    	<input onkeydown="javascript: trigger_search (e)" id="search" type="text" placeholder="I want to ..." style="color: #ffffff; ">
+		
+    	<input onkeydown="javascript: trigger_search (e)" id="search" type="text" placeholder="I want to ..." >
     	<button style="margin-top: 1.2em" 
 	   			class="mui-btn mui-btn--raised mui-btn--danger"
 	   			onclick="javascript: query ()">
 	   			Go, Dil!</button>
-    	</div>
-</div>
+    	</div> -->
+
+		<?php search_box () ?>
 <?php
 	$query = $_GET ["q"];
 	$data = new DataSource ();
 	add_card ($data -> get ($query));
 ?>
+
 </body>
