@@ -72,3 +72,4 @@ function fortune ()
     xmlhttp.open ("GET", "http://shajikhan.in/api/fortune", true)
     xmlhttp.send ()
 }
+

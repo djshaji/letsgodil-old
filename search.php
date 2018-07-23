@@ -98,4 +98,24 @@ class DataSource {
 }
 
 
+class Query {
+	public $query = null ;
+	public $title = null ;
+	public $description = null;
+	public $thumb = null;
+	public $id = null ;
+	public $url = null;
+	public $info = null ;
+	public $provider = null;
+	public $error = null;
+	public $error_code = null ;
+	public $timestamp = null;
+} 
+
+class Provider {
+	public function search ($query) {
+		return null ;
+	}
+}
+
 ?>
