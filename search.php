@@ -70,6 +70,16 @@ class DataCard {
 	public $provider = null;
 } 
 
+function add_card_legacy ($query) {
+	$card = new DataCard ();
+	$card -> name = $query -> title ;
+	$card -> description = $query -> title ;
+	$card -> url = $query -> url ;
+	$card -> thumb = "logo" ;
+	$card -> provider = $query -> provider ;
+	$card -> info = $query -> info ;
+	add_card ($card);
+}
 class DataSource {
 	function get_patrick ($query) {
 		$card = new DataCard ();
@@ -118,4 +128,13 @@ class Provider {
 	}
 }
 
+function search ($query) {
+	// sanitize!
+	$query = str_replace (" ", "%20", $query);
+
+	// There should be some sort of (automated) list here
+	$wikipedia = new Wikipedia ();
+	// Wow this is awesome code
+	$wikipedia -> search  ($query);
+}
 ?>

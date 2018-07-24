@@ -19,4 +19,10 @@ function util_get_url_as_json ($url) {
     return json_decode ($result, true );
 }
 
+function util_message_box ($message) {
+    print ("
+        <script>alert (\"". $message . "\")</script>
+    ");
+}
+
 ?>

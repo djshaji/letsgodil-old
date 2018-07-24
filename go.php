@@ -1,23 +1,22 @@
-<?php
-	include "search.php";
-	include "ui.php";
-?>
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="mui.min.css" rel="stylesheet" type="text/css" />
-    <script src="mui.min.js"></script>
-    <script src="main.js">
-    </script>
 
+ <!-- include defaults! -->
+ <?php 
+include "lgd.php";
+lgd_init ("index");
+?>
   </head>
 
 
 <body onload="javascript: set_search ()">
-<?php banner () ?>
+<?php 
+	include "ui.php";
+	banner () ?>
 <!-- <div class="mui-appbar" >
 	<a href="http://letsgodil.com" >
     <img 	src="logo_small.png" 
@@ -44,10 +43,23 @@
     	</div> -->
 
 		<?php search_box () ?>
+		<?php
+	include "search.php";
+	include "util.php";
+	include "providers/wikipedia.php";
+
+?>
 <?php
+	// $_GET ["q"] = "albert einstein";
 	$query = $_GET ["q"];
-	$data = new DataSource ();
-	add_card ($data -> get ($query));
+	/* $data = new DataSource ();
+	add_card ($data -> get ($query)); */
+
+	// Jess! Breadcrumbs!
+
+	// Am i cool or what
+	// util_message_box ($query);
+	search ($query);
 ?>
 
 </body>

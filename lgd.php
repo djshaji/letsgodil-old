@@ -12,7 +12,7 @@ function lgd_init ($module) {
     
     // include default js/css
     print (
-        ' <link href="http://letsgodil.com/mui.min.css" rel="stylesheet" type="text/css" />
+        ' <link href="mui.min.css" rel="stylesheet" type="text/css" />
         <script src="mui.min.js"></script>
         <link href="style.css" rel="stylesheet" type="text/css" />
         <script src="main.js"></script>

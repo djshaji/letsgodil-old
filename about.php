@@ -9,13 +9,12 @@ include "ui.php";
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="mui.min.css" rel="stylesheet" type="text/css" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="mui.min.js"></script>
-    <script src="main.js">
-    </script>
-
-  </head>
+ <!-- include defaults! -->
+ <?php 
+include "lgd.php";
+lgd_init ("index");
+?>
+</head>
 <body style="background-image: url(pangong.jpg);">
 <!--   <div class="mui-appbar" >
 	<a href="http://letsgodil.com" >
