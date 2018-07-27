@@ -29,17 +29,12 @@ function set_titles () {
 	set_subtitle ();
 }
 
-function query (id) {
+function query () {
 	var q = document.getElementById("search").value;
 	if (q == '') {
 		alert ("Enter a search term!");
 		return;
 	}
-
-	if (id != null) {
-		document.getElementById (id).style.visibility = "visible" ;
-	}
-
 	var uri = "go.php?q=" + q;
 	window.location.replace (uri);
 }

@@ -16,6 +16,23 @@ lgd_init ("index");
 ?>
 </head>
 <body style="background-image: url(pangong.jpg);">
+<!--   <div class="mui-appbar" >
+	<a href="http://letsgodil.com" >
+    <img 	src="logo_small.png" 
+			alt="Go Dil"
+			style="margin-top: .5em; margin-left: .5em">
+	</a>
+	
+	<label 	class="mui--text-display1" 
+			id="title"
+			style="margin-left: .3em;margin-top: 0;vertical-align: 30%"
+			>
+		Let's Go, Dil!
+	</label>
+
+	
+</div> -->
+<?php banner () ?>
 <br>
 <div class="mui-container-fluid" style="opacity: .82; border-radius: 20px">
 <div class="mui-panel" style="border-radius: 20px">

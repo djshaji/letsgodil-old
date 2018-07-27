@@ -4,9 +4,6 @@
     virginity here!
     
     Loving learning something new.
-
-	Our default color #dd2c00
-	material deep-orange-A700
 -->
 
 <!doctype html>
@@ -25,10 +22,10 @@ lgd_init ("index");
 
   </head>
   <body>
-   <div 
+   <div class="mui-container-fluid"
     		align="center"
     		style="width: 100%">
-    <div 
+    <div class="mui-container-fluid"
     		align="center"
     		style="margin-top: 3em">
 		<a href="javascript: set_titles ()" >        
@@ -36,41 +33,33 @@ lgd_init ("index");
         		alt="Go Dil">
         </a>
     </div>
-    <div 
+    <div class="mui-container-fluid"
     		align="center"
     		style="margin-top: 1.3em">
-    	<h1 
+    	<label class="mui--text-display2" 
     			style="text-align: center;" id="title">
     		Let's Go, Dil!
-</h1>
+    	</label>
 	</div>
-    <div 
+    <div class="mui-container-fluid"
     		align="center"
-    		style="margin-top: -1em">
-    	<label
+    		style="margin-top: .5em">
+    	<label class="mui--text-body1" 
     			style="text-align: center; 
-				font-size: 128%;" id="subtitle">
+    			font-size: 128%;" id="subtitle">
     		Where do you want to go today?
     	</label>
     </div>
-	<form action="#">
-		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
-		style="width: 70%">
-		<input class="mdl-textfield__input" type="text" id="search" width="70%">
-		<label class="mdl-textfield__label" for="search">I want to ...</label>
-		</div>
-	</form>
-	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect"
-		onclick="javascript: query ('spin')"
-		id="button1" >
-		Go, Dil!
-		</button>
-	
-		<div style="padding: 20px; visibility:hidden" id="spin">
-		<div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
-	</div>
-	<div align="right" style="padding: 20px">
-		<span  >
+ 	<div class="mui-textfield"
+ 			style="width: 70%">
+    	<input id="search" type="text" placeholder="I want to ...">
+	   	<button style="margin-top: 1.2em" 
+	   			class="mui-btn mui-btn--raised mui-btn--danger"
+	   			onclick="javascript: query ()">
+	   			Go, Dil!</button>
+  	</div>
+	<div align="right" class="mui-container-fluid" style="padding: 20px">
+		<span  class="mui--text-light-secondary">
 		<a href="about"> About </a>
 		</span>
 	</div>
