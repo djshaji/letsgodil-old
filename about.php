@@ -1,5 +1,5 @@
 <?php
-include "ui.php";
+// include "ui.php";
 ?>
 
 <!doctype html>
@@ -17,14 +17,23 @@ lgd_init ("index");
 </head>
 <body style="background-image: url(pangong.jpg);">
 <br>
-<div class="mui-container-fluid" style="opacity: .82; border-radius: 20px">
-<div class="mui-panel" style="border-radius: 20px">
+<div class="mdl-card" 
+  style="opacity: .82; border-radius: 20px;
+    width:90%;padding:20px
+    position:absolute; margin:20px;height:100%
+    ">
+
+<div  
+  style="opacity:1;border-radius: 20px;
+    width:96%;margin:20px;
+    max-width:100%;max-height:100%;height:100%
+    ">
 <span >
 Where do you want to go? What do you want to do? What do you want to be?
 </span>
 <br><br>
-<div class="mui--text-headline">
-<span class="mui--text-accent"> 
+<div class="mdl-card__title">
+<span class="mdl-card__title-text"> 
 What are you waiting for? </span>
 </div>
 <br>
@@ -32,8 +41,8 @@ What are you waiting for? </span>
 <br><br>
 What are you waiting for? You have only one life to live. Do what you want to do. Be what you want to be. For once in your life, listen to your heart, and say:
 <br><br>
-<div class="mui--text-headline">
-<span class="mui--text-danger">
+<div class="mdl-card__title">
+<span class="mdl-card__title-text mdl-color-text--red-A700">
 <strong>Let's Go, Dil!</strong>
 </span>
 </div>
@@ -45,15 +54,13 @@ Connect with others who share the same dreams as you. Find help, or help others.
 <br><br>
 That's the life that you were born to live. Time is running out. <span class="mui--text-danger"><b>Let go of that fear.</b></span>
 <br><br>
-<span class="mui--text-accent">
-<b><em>So, what do you want to do?</em></b></span>
+<span class="mdl-color-text--deep-orange-A700">
+<b>So, what do you want to do?</b></span>
 </div>
-<div class="mui-textfield" >
-<input   id="search" type="text" placeholder="I want to ...">
-<button  onclick="javascript: query ()" class="mui-btn mui-btn--raised mui-btn--danger">
-Let's Go, Dil!
-</button>
-</div>
+
+<?php search_box ("about"); ?>
+
+		
 </div>
 </div>
 <div class="mui-container-fluid" style="border-radius: 20px; opacity: .82;">

@@ -38,6 +38,7 @@ function query (id) {
 
 	if (id != null) {
 		document.getElementById (id).style.visibility = "visible" ;
+		componentHandler.upgradeElement (document.getElementById (id));
 	}
 
 	var uri = "go.php?q=" + q;

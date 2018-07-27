@@ -1,4 +1,5 @@
 <?php
+include "ui.php";
 
 function lgd_init ($module) {
     // set user agent

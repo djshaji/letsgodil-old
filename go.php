@@ -14,9 +14,10 @@ lgd_init ("index");
 
 
 <body onload="javascript: set_search ()">
-<?php 
-	include "ui.php";
-	banner () ?>
+ <?php 
+	// include "ui.php";
+	// banner () 
+?> 
 <!-- <div class="mui-appbar" >
 	<a href="http://letsgodil.com" >
     <img 	src="logo_small.png" 
@@ -42,7 +43,7 @@ lgd_init ("index");
 	   			Go, Dil!</button>
     	</div> -->
 
-		<?php search_box () ?>
+		<?php search_box ("go") ?>
 		<?php
 	include "search.php";
 	include "util.php";

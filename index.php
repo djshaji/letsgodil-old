@@ -7,6 +7,8 @@
 
 	Our default color #dd2c00
 	material deep-orange-A700
+	mdl-color-text--deep-orange-A700
+	mdl-color--deep-orange-A700
 -->
 
 <!doctype html>
@@ -53,7 +55,7 @@ lgd_init ("index");
     		Where do you want to go today?
     	</label>
     </div>
-	<form action="#">
+	<!-- <form action="javascript: query ()">
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
 		style="width: 70%">
 		<input class="mdl-textfield__input" type="text" id="search" width="70%">
@@ -68,8 +70,12 @@ lgd_init ("index");
 	
 		<div style="padding: 20px; visibility:hidden" id="spin">
 		<div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
-	</div>
-	<div align="right" style="padding: 20px">
+	</div> -->
+
+<?php search_box ("index"); ?>
+
+
+<div align="right" style="padding: 20px">
 		<span  >
 		<a href="about"> About </a>
 		</span>
