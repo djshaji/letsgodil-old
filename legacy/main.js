@@ -29,12 +29,18 @@ function set_titles () {
 	set_subtitle ();
 }
 
-function query () {
+function query (id) {
 	var q = document.getElementById("search").value;
 	if (q == '') {
 		alert ("Enter a search term!");
 		return;
 	}
+
+	if (id != null) {
+		document.getElementById (id).style.visibility = "visible" ;
+		componentHandler.upgradeElement (document.getElementById (id));
+	}
+
 	var uri = "go.php?q=" + q;
 	window.location.replace (uri);
 }

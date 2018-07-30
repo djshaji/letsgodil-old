@@ -1,8 +1,27 @@
-function placeholder () {
-    alert ("This will do something, someday!") ;
+function lgd_spinners (show) {
+    var s1 = document.getElementById ("spinner1") ;
+    var s2 = document.getElementById ("spinner2") ;
+    if (show ) {
+        if (s1) {
+            s1.style.visibility = "visible";
+        }
+
+        if (s2) {
+            s2.style.visibility = "visible";
+        }
+    }
+    else {
+        if (s1) {
+            s1.style.visibility = "hidden";
+        }
+
+        if (s2) {
+            s2.style.visibility = "hidden";
+        }
+    }
 }
 
-function set_title () {
+function lgd_set_title () {
 	var titles = [
 		"Let\'s Go, Dil!",
 		"#LetsGD",
@@ -13,7 +32,7 @@ function set_title () {
 	document.getElementById("title").innerHTML = titles [Math.floor(Math.random() * Math.floor(4))];
 }
 
-function set_subtitle () {
+function lgd_set_subtitle () {
 	var subtitles = [
 		"Where do you want to go today?",
 		"Where does your heart want to go today?",
@@ -24,19 +43,21 @@ function set_subtitle () {
 	document.getElementById("subtitle").innerHTML = subtitles [Math.floor(Math.random() * Math.floor(4))];
 }
 
-function set_titles () {
-	set_title ();
-	set_subtitle ();
+function lgd_set_titles () {
+	lgd_set_title ();
+	lgd_set_subtitle ();
 }
 
-function query (id) {
+function lgd_query (id) {
 	var q = document.getElementById("search").value;
 	if (q == '') {
 		alert ("Enter a search term!");
 		return;
 	}
 
-	if (id != null) {
+    lgd_spinners (true);
+
+    if (id != null) {
 		document.getElementById (id).style.visibility = "visible" ;
 		componentHandler.upgradeElement (document.getElementById (id));
 	}
@@ -45,22 +66,14 @@ function query (id) {
 	window.location.replace (uri);
 }
 
-function set_search() {
+function lgd_set_search() {
 	// This needs to be fixed!
 	document.getElementById("search").value = window.location.href.substr( window.location.href.indexOf("?") + 3).replace ("%20", " ");
 	document.title = "#Lets GD:  " . concat (window.location.href.substr( window.location.href.indexOf("?") + 3)).replace ("%20", " ");
 }
 
-function trigger_search (e) {
-    if (e.keyCode == 13)
-    {
-		query ();
-        return false;
-    }
-    return true;
-}
 
-function fortune_change () 
+function lgd_fortune_change () 
 {
     if (this.readyState == 4 && this.status == 200)
     {
@@ -70,7 +83,7 @@ function fortune_change ()
     }
 }
 
-function fortune ()
+function lgd_fortune ()
 {
     var xmlhttp;
     xmlhttp = new XMLHttpRequest();
@@ -79,3 +92,6 @@ function fortune ()
     xmlhttp.send ()
 }
 
+function lgd_finish (module) {
+    lgd_spinners (false);
+}

@@ -5,7 +5,7 @@ function search_box1() {
 	<div class="mui-textfield"
 	style="width: 70%; margin-left: 5.3em;margin-top: 0;vertical-align: 0;" >
 
-<input onkeydown="javascript: trigger_search (e)" id="search" type="text" placeholder="I want to ..." >
+<input id="search" type="text" placeholder="I want to ..." >
 <button style="margin-top: 1.2em" 
 		  class="mui-btn mui-btn--raised mui-btn--danger"
 		  onclick="javascript: query ()">
@@ -38,11 +38,11 @@ function banner () {
 
 }
 
-function search_box ($module) {
+function ui_search_entry ($module, $box_no) {
     $x = parse_url ($_GET);
 
     print ('
-    <form action="javascript: query ('. $x['path'] . ')">
+    <form action="javascript: lgd_query ('. $x['path'] . ')">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
     style="width: 70%">
     <input class="mdl-textfield__input" type="text" id="search" width="70%">
@@ -50,13 +50,34 @@ function search_box ($module) {
     </div>
 </form>
 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect"
-    onclick="javascript: query ('. $x['path'] . ')"
-    id="button1" >
+    onclick="javascript: lgd_query ('. $x['path'] . ')"
+    id="button' . $box_no . '">
     Go, Dil!
     </button>
-    <span style="visibility:hidden;margin-left:20px;vertical-align:-50%" id="spin" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></span>
+    <span style="visibility:visible;margin-left:20px;vertical-align:-50%" id="spinner' . $box_no . '" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></span>
     ');
 //<div style="padding: 20px; visibility:hidden" id="spin">
 }
 
+function ui_header ($module) {
+    print ('
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <a href="http://letsgodil.com">
+            <img src="logo_small.png" style="margin-right:12px;margin-left:-45px"></a>
+            <span class="mdl-layout-title">
+                <h4>Let\'s Go, Dil!</h4>
+            </span>
+            </div>
+        </header>
+
+    ');
+}
+
+function ui_footer ($module) {
+    // close the header!
+    print ('</div>');
+}
 ?>

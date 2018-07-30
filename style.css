@@ -5,3 +5,7 @@ body {
 .lgd-red {
     color: #dd2c00;
 }
+
+a:link,b {
+    text-decoration: none;
+}

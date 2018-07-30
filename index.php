@@ -26,7 +26,7 @@ lgd_init ("index");
 ?>
 
   </head>
-  <body>
+  <body onload="javascript: lgd_finish ('index');">
    <div 
     		align="center"
     		style="width: 100%">
@@ -55,7 +55,7 @@ lgd_init ("index");
     		Where do you want to go today?
     	</label>
     </div>
-	<!-- <form action="javascript: query ()">
+	<!-- <form action="javascript: lgd_query ()">
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
 		style="width: 70%">
 		<input class="mdl-textfield__input" type="text" id="search" width="70%">
@@ -72,7 +72,7 @@ lgd_init ("index");
 		<div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
 	</div> -->
 
-<?php search_box ("index"); ?>
+<?php ui_search_entry  ("index", 1); ?>
 
 
 <div align="right" style="padding: 20px">

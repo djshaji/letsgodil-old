@@ -21,6 +21,7 @@ function lgd_init ($module) {
         <link href="style.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="lgd.js"></script>
         <script src="main.js"></script>
         ');
 }

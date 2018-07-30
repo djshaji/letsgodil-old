@@ -13,7 +13,7 @@ lgd_init ("index");
   </head>
 
 
-<body onload="javascript: set_search ()">
+<body onload="javascript: lgd_set_search (); lgd_finish ('go');">
  <?php 
 	// include "ui.php";
 	// banner () 
@@ -43,7 +43,7 @@ lgd_init ("index");
 	   			Go, Dil!</button>
     	</div> -->
 
-		<?php search_box ("go") ?>
+		<?php ui_search_entry  ("go",1 ) ?>
 		<?php
 	include "search.php";
 	include "util.php";
