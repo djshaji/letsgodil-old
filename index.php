@@ -72,7 +72,7 @@ lgd_init ("index");
 		<div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
 	</div> -->
 
-<?php ui_search_entry  ("index", 1); ?>
+<?php ui_search  ("index"); ?>
 
 
 <div align="right" style="padding: 20px">

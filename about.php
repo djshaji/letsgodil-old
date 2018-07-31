@@ -24,13 +24,15 @@ lgd_init ("index");
   <div class="mdl-card" 
     style="opacity: .82; border-radius: 20px;
       width:90%;padding:20px
-      position:absolute; margin:20px;height:100%
+      position:absolute; margin:20px;height:100%;
+      align:center
     ">
 
     <div  
       style="opacity:1;border-radius: 20px;
         width:96%;margin:20px;
-        max-width:100%;max-height:100%;height:100%
+        max-width:100%;max-height:100%;height:100%;
+        align:center
         ">
       <span >
       Where do you want to go? What do you want to do? What do you want to be?
@@ -61,22 +63,24 @@ lgd_init ("index");
       <b>So, what do you want to do?</b></span>
       
   
-<?php ui_search_entry  ("about", 1); ?>
+<?php ui_search  ("about"); ?>
 
 		
 </div>
 </div>
-<div class="mdl-card" style="border-radius: 20px; opacity: .82;margin:20px;width:43%">
-<button style="border-radius: 20px;margin:10px" onclick="window.location.replace ('https://github.com/djshaji/letsgodil')" class="mdl-buttonmdl-js-button mdl-button--raised mdl-button--colored">
-<img src="github.png">
-</button>
-<span style="padding:10px"> <b>#LetsGD is  an open source project.</b>
-Download the source on 
-<a href="https://github.com/djshaji/letsgodil"> <b>Github</b>.</a>
-</span>
-</div>
 
-  <div class="mdl-card" style="border-radius: 20px; opacity: .82;margin:20px;width:43%">
+<div class="mdl-grid" style="align:center;margin-left:70px">
+  <div class="mdl-card" style="border-radius: 20px; opacity: .82;margin:20px;minwidth:60%">
+  <button style="border-radius: 20px;margin:10px" onclick="window.location.replace ('https://github.com/djshaji/letsgodil')" class="mdl-buttonmdl-js-button mdl-button--raised mdl-button--colored">
+  <img src="github.png">
+  </button>
+  <span style="padding:10px"> <b>#LetsGD is  an open source project.</b>
+  Download the source on 
+  <a href="https://github.com/djshaji/letsgodil"> <b>Github</b>.</a>
+  </span>
+  </div>
+
+  <div class="mdl-card" style="border-radius: 20px; opacity: .82;margin:20px;minwidth:60%">
     <button onclick="window.location.replace ('http://shajikhan.in')" class="mdl-buttonmdl-js-button mdl-button--raised mdl-button--colored"
       style="border-radius: 20px;margin:10px;height:36px; font-family: Montserrat;font-size: 106%">
       <b>👨‍💻 Developer</b>
@@ -86,7 +90,9 @@ Download the source on
         Visit his <a href="http://shajikhan.in"><b>website</b></a>, or follow him on
         <a style="text-decoration: none" href="https://plus.google.com/+ShajiDJ"><b>Google+</b></a>.
     </span>
-</div>
+  </div>
+
+  </div>
  <!-- grid -->
 </div> 
 <?php ui_footer ('about'); ?>

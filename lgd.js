@@ -1,4 +1,4 @@
-function lgd_spinners (show) {
+function lgd_spinners_old (show) {
     var s1 = document.getElementById ("spinner1") ;
     var s2 = document.getElementById ("spinner2") ;
     if (show ) {
@@ -94,4 +94,16 @@ function lgd_fortune ()
 
 function lgd_finish (module) {
     lgd_spinners (false);
+}
+
+function lgd_spinners (show) {
+    // Yeah!
+    var spinners = document.getElementsByClassName ("mdl-spinner");
+    var i = 0 ;
+    for (i = 0 ; i < spinners.length ; i ++) {
+        if (show && spinners [i].id.search ("noshow") == -1)
+            spinners [i].style.visibility = "visible";
+        else
+        spinners [i].style.visibility = "hidden";
+    }
 }

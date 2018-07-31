@@ -1,4 +1,7 @@
 <?php
+global $box_no;
+$box_no = 0 ;
+
 function search_box1() {
 	print ('
 	<div class="mui-container-fluid">
@@ -38,8 +41,9 @@ function banner () {
 
 }
 
-function ui_search_entry ($module, $box_no) {
+function ui_search ($module) {
     $x = parse_url ($_GET);
+    $box_entry += 1;
 
     print ('
     <form action="javascript: lgd_query ('. $x['path'] . ')">
@@ -48,7 +52,14 @@ function ui_search_entry ($module, $box_no) {
     <input class="mdl-textfield__input" type="text" id="search" width="70%">
     <label class="mdl-textfield__label" for="search">I want to ...</label>
     </div>
-</form>
+</form>');
+
+if ($module == "index") {
+//For alignment (!)
+    print ('<span style="visibility:hidden;margin-right:20px;vertical-align:-50%" id="noshow' . $box_no . '" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></span>');
+} ;
+
+print ('
 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect"
     onclick="javascript: lgd_query ('. $x['path'] . ')"
     id="button' . $box_no . '">
