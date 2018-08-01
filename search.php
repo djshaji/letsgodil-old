@@ -124,7 +124,20 @@ class Query {
 
 class Provider {
 	public function search ($query) {
-		return null ;
+		$q = new Query ();
+		$q -> query = "go dil" ;
+		$q -> title = "Go Dil" ;
+		$q -> description = "Go where your heart takes you";
+		$q -> thumb = "logo.png";
+		$q -> id = "godil01" ;
+		$q -> url = "letsgodil.com";
+		$q -> info = "Go Dil Info Here" ;
+		$q -> provider = "Dummy Provider";
+		$q -> error = null;
+		$q -> error_code = null ;
+		$q -> timestamp = null;
+
+		return $q ;
 	}
 }
 
@@ -135,6 +148,14 @@ function search ($query) {
 	// There should be some sort of (automated) list here
 	$wikipedia = new Wikipedia ();
 	// Wow this is awesome code
-	$wikipedia -> search  ($query);
+
+	// $queries = $wikipedia -> search  ($query);
+	$provider = new Provider () ;
+	// $length = count ($queries);
+	for ($x = 0 ; $x < 6; $x++) {
+		// ui_card ($queries [$x]);
+		ui_card ($provider -> search (null));
+	}
 }
+
 ?>

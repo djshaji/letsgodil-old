@@ -9,3 +9,17 @@ body {
 a:link,b {
     text-decoration: none;
 }
+
+.image.mdl-card {
+    margin: 20px;
+    width: 512px;
+    /* background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover; */
+  }
+  .image > .mdl-card__title {
+    /* color: #fff; */
+    /* height: 176px;  for image*/
+  }
+  .image > .mdl-card__menu {
+    /* color: #fff; */
+  }
+  

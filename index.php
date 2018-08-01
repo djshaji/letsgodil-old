@@ -79,7 +79,7 @@ lgd_init ("index");
 		<span  >
 		<a href="about"> About </a>
 		</span>
-	</div>
+</div>
 
 </div>
   </body>

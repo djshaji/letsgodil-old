@@ -14,18 +14,21 @@ lgd_init ("index");
 
 
 <body onload="javascript: lgd_set_search (); lgd_finish ('go');">
- <?php 
-	include "ui.php";
-	ui_header ('go');
-?> 
+ <?php ui_header ('go'); ?>
 
-<?php ui_search  ("go") ?>
+<div style="align:left;margin: 20px">
+<?php	ui_search  ("go"); ?>
+</div>
 
 <?php
 include "search.php";
 include "util.php";
 include "providers/wikipedia.php";
 ?>
+
+<!-- Where would we put the results? -->
+<div class="mdl-grid">
+
 <?php
 	// $_GET ["q"] = "albert einstein";
 	$query = $_GET ["q"];
@@ -36,7 +39,16 @@ include "providers/wikipedia.php";
 
 	// Am i cool or what
 	// util_message_box ($query);
+
 	search ($query);
 ?>
 
+<div style="align:left;margin: 20px">
+<?php	ui_search  ("go"); ?>
+</div>
+
+<!-- Grid -->
+</div>
+
+<?php ui_footer ('go'); ?>
 </body>

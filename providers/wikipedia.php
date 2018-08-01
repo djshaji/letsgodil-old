@@ -7,6 +7,7 @@ class  Wikipedia extends Provider {
     }
 
     public function search ($query) {
+        $queries = array () ;
         $qs = "https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&inprop=url&srsearch=" . $query . "&utf8=";
         $result = util_get_url_as_json ($qs);
     //    print ($result ["query"] ["searchinfo"]["totalhits"]);
@@ -23,8 +24,11 @@ class  Wikipedia extends Provider {
             $qim = "https://en.wikipedia.org/w/api.php?action=query&prop=info|images&inprop=url&pageids=" . $res["pageid"];
             $qres = util_get_url_as_json ($qim);
             $q -> url = $qres ["query"]["pages"][$q -> id]["fullurl"];
-            add_card_legacy ($q);
+            // add_card_legacy ($q);
+            array_push ($queries, $q);
        }
+    
+       return $queries;
     }
 }
 

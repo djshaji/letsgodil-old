@@ -49,8 +49,17 @@ function lgd_set_titles () {
 }
 
 function lgd_query (id) {
-	var q = document.getElementById("search").value;
-	if (q == '') {
+	// var q = document.getElementById("search").value;
+    var entries = document.getElementsByClassName ("mdl-textfield");
+    var i = 0 ;
+    for (i = 0 ; i < entries.length ; i ++) {
+        if (entries [i].value != '') {
+            q = entries [i].value ;
+            break;
+        }
+    }
+
+    if (q == '') {
 		alert ("Enter a search term!");
 		return;
 	}
@@ -68,7 +77,7 @@ function lgd_query (id) {
 
 function lgd_set_search() {
 	// This needs to be fixed!
-	document.getElementById("search").value = window.location.href.substr( window.location.href.indexOf("?") + 3).replace ("%20", " ");
+	// document.getElementById("search").value = window.location.href.substr( window.location.href.indexOf("?") + 3).replace ("%20", " ");
 	document.title = "#Lets GD:  " . concat (window.location.href.substr( window.location.href.indexOf("?") + 3)).replace ("%20", " ");
 }
 
